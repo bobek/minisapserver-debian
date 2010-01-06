@@ -1,0 +1,23 @@
+This package was debianized by Antonin Kral <A.Kral@sh.cvut.cz> on
+Tue, 25 Nov 2008 07:19:53 +0100.
+
+It was downloaded from http://www.videolan.org
+
+Upstream Authors:
+
+    Arnaud Schauly <gitan@via.ecp.fr>
+    Clment Stenac <zorglub@via.ecp.fr>
+    Damien Lucas <nitrox@videolan.org>
+    Rmi Denis-Courmont <rem # videolan.org>
+
+
+Copyright:
+
+    Copyright (C) 1998-2004 VideoLAN
+
+License:
+
+    GPL (see /usr/share/common-licenses/GPL)
+
+The Debian packaging is (C) 2008, Antonin Kral <A.Kral@sh.cvut.cz> and
+is licensed under the GPL, see `/usr/share/common-licenses/GPL'.

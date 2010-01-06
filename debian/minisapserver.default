@@ -1,0 +1,13 @@
+# Defaults for minisapserver initscript
+# sourced by /etc/init.d/minisapserver
+# installed at /etc/default/minisapserver by the maintainer scripts
+
+#
+# This is a POSIX shell fragment
+#
+
+# Additional options that are passed to the Daemon.
+DAEMON_OPTS=""
+
+# Change to "yes" when want to start daemon after boot
+RUN="no"
