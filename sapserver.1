@@ -1,0 +1,37 @@
+.TH SAPSERVER 1 "July 21 2004" "Clément Stenac" "VideoLAN"
+.SH NAME
+sapserver - SAP and SLP announcment for the VLC Media Player
+.SH SYNOPSIS
+.B sapserver
+.BR [OPTIONS]
+.PP
+.SH DESCRIPTION
+.B sapserver
+Announces, using the SAP/SDP or the SLP protocols, MPEG2 TS streams produced by for instance VLS. These announces can be received by the VLC Media Player o.a.
+ See the default configuration file for examples.
+.SH OPTIONS
+.TP
+.B -f file
+Use the \fIfile\fP as configuration file
+.TP
+.B -c file
+Same as -f
+.TP
+.B -d 
+Daemonize the process (run it in the background)
+.TP
+.B -h 
+Displays the help
+.TP
+.B -t
+Specifies the protocol to use ("slp" or "sap". Default is sap)
+.TP
+.B -u
+When using SLP, unregister the programs
+.TP
+.B -s
+When using SAP, display a dot for each packet sent
+.SH "SEE ALSO"
+.IR vlc(1)
+.TP
+The "VideoLAN Howto", found on http://www.videolan.org
