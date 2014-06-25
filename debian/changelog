@@ -1,3 +1,11 @@
+minisapserver (0.3.6-2) unstable; urgency=low
+
+  * Use dh-autoreconf in build to support new architectures (Closes: #727459)
+    Many thanks to Chen Baozi for a proposed NMU and patch
+  * Polishing package a bit (changes to rules, init.d)
+
+ -- Antonin Kral <A.Kral@sh.cvut.cz>  Wed, 25 Jun 2014 08:46:45 +0100
+
 minisapserver (0.3.6-1) unstable; urgency=low
 
   * New upstream release

@@ -24,8 +24,8 @@
 #
 ### BEGIN INIT INFO
 # Provides:          minisapserver
-# Required-Start:    $network $local_fs
-# Required-Stop:
+# Required-Start:    $network $local_fs $remote_fs
+# Required-Stop:     $local_fs $remote_fs
 # Should-Start:
 # Should-Stop:
 # Default-Start:     2 3 4 5

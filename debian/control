@@ -2,8 +2,10 @@ Source: minisapserver
 Section: net
 Priority: extra
 Maintainer: Antonin Kral <A.Kral@sh.cvut.cz>
-Build-Depends: debhelper (>= 7), autotools-dev
-Standards-Version: 3.8.3
+Build-Depends: debhelper (>= 7), autotools-dev, dh-autoreconf
+Standards-Version: 3.9.5
+Vcs-Git: git://github.com/bobek/minisapserver-debian.git
+Vcs-Browser: https://github.com/bobek/minisapserver-debian
 Homepage: http://www.videolan.org
 
 Package: minisapserver

@@ -20,7 +20,10 @@ else
 CROSS= --build $(DEB_BUILD_GNU_TYPE)
 endif
 
-
+CPPFLAGS:=$(shell dpkg-buildflags --get CPPFLAGS)
+CFLAGS:=$(shell dpkg-buildflags --get CFLAGS)
+CXXFLAGS:=$(shell dpkg-buildflags --get CXXFLAGS)
+LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS)
 
 config.status: configure
 	dh_testdir
@@ -31,10 +34,12 @@ endif
 ifneq "$(wildcard /usr/share/misc/config.guess)" ""
 	cp -f /usr/share/misc/config.guess config.guess
 endif
-	./configure $(CROSS) --prefix=/usr --mandir=\$${prefix}/share/man --infodir=\$${prefix}/share/info --sysconfdir=/etc CFLAGS="$(CFLAGS)" LDFLAGS="-Wl,-z,defs"
+	dh_autoreconf
+	./configure $(CROSS) --prefix=/usr --mandir=\$${prefix}/share/man --infodir=\$${prefix}/share/info --sysconfdir=/etc CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)"
 
-
-build: build-stamp
+build: build-arch build-indep
+build-arch: build-stamp
+build-indep: build-stamp
 
 build-stamp:  config.status 
 	dh_testdir
@@ -54,6 +59,7 @@ clean:
 	[ ! -f Makefile ] || $(MAKE) distclean
 	rm -f config.sub config.guess
 
+	dh_autoreconf_clean
 	dh_clean 
 
 install: build
